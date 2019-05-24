@@ -1,1 +1,55 @@
+#include <iostream>
+#include <conio.h>
 
+using namespace std;
+
+int main()
+{
+	int number[10], maxA = 0, sum = 0, a, smallest, largest, average;
+
+	cout << "Please enter 10 values: " << endl;
+
+	for (a = 0; a < 10; a ++)
+	{
+		number[a] = 0;
+	}
+
+	for (a = 0; a < 10; a ++)
+	{
+		cin >> number[a];
+	}
+
+	for (a = 0; a < 10; a ++)
+	{
+		if (number[maxA] < number[a])
+		{
+			maxA = a;
+			largest = number[maxA];
+		}
+	}
+		
+	for (a = 0; a < 10; a ++)
+	{
+		if (number[maxA] > number[a])
+		{
+			maxA = a;
+			smallest = number[maxA];
+		}
+	}
+
+	for (a = 0; a < 10; a ++)
+	{
+		sum = sum + number[a];
+		average = sum / 10;
+	}
+
+	cout << endl;
+	
+	cout << "The smallest value from your inputs is: " << smallest << endl;
+	cout << "The largest value from your inputs is: " << largest << endl;
+	cout << "The sum of your inputted values is: " << sum << endl;
+	cout << "The average of your inputted values is: " << average;
+
+	_getch();
+	return 0;
+}
