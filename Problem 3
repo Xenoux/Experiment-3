@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int letter, stringLength;
+	char text[100];
+
+	cout << "Please input your text which is limited to 100 characters: ";
+	cin >> text;
+	
+	cout << endl << "Inputted text in reverse: ";
+
+	stringLength = strlen(text);
+
+	for (letter = stringLength - 1; letter >= 0; letter --)
+	{
+		cout << text[letter];
+	}
+
+	cout << endl << "The size of the array of your inputted text is: " << stringLength;
+
+	_getch();
+	return 0;
+}
