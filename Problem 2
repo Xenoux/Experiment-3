@@ -1,0 +1,62 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int provinceA[7], provinceB[7], provinceC[7], day, index;
+
+	cout << "[PROVINCIAL TEMPERATURE DATA REGISTRY]" << endl << endl;
+	cout << "Please register the recorded temperature for the corresponding day in Province A." << endl;
+	for (day = 1; day <= 7; day ++)
+	{
+		cout << "Province A, Day " << day << ": ";
+		index = day - 1;
+		cin >> provinceA[index];
+	}
+
+	cout << endl << "Please register the recorded temperature for the corresponding day in Province B." << endl;
+	for (day = 1; day <= 7; day ++)
+	{
+		cout << "Province B, Day " << day << ": ";
+		index = day - 1;
+		cin >> provinceB[index];
+	}
+
+	cout << endl << "Please register the recorded temperature for the corresponding day in Province C." << endl;
+	for (day = 1; day <= 7; day ++)
+	{
+		cout << "Province C, Day " << day << ": ";
+		index = day - 1;
+		cin >> provinceC[index];
+	}
+
+	cout << endl << endl;
+
+	cout << "[PROVINCIAL TEMPERATURE DATABASE]" << endl << endl;
+
+	cout << "Recorded temperatures for each day of the week in Province A:" << endl;
+	for (day = 1; day <= 7; day ++)
+	{
+		index = day - 1;
+		cout << "Province A, Day " << day << "= " << provinceA[index] << endl;
+	}
+
+	cout << endl << "Recorded temperatures for each day of the week in Province B:" << endl;
+	for (day = 1; day <= 7; day ++)
+	{
+		index = day - 1;
+		cout << "Province B, Day " << day << "= " << provinceB[index] << endl;
+	}
+
+	cout << endl << "Recorded temperatures for each day of the week in Province C:" << endl;
+	for (day = 1; day <= 7; day ++)
+	{
+		index = day - 1;
+		cout << "Province C, Day " << day << "= " << provinceC[index] << endl;
+	}
+
+	_getch();
+	return 0;
+}
